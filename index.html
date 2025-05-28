@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -18,7 +17,7 @@
     'script','https://connect.facebook.net/en_US/fbevents.js');
 
     fbq('init', '127978927946856');
-    fbq('track', 'Lead');
+    fbq('track', 'Purchase', {value: 0.00, currency: 'THB'});
   </script>
 
   <script>
@@ -26,12 +25,10 @@
       "https://m.me/388082008038044",
       "https://m.me/273604199659032"
     ];
-
     const randomLink = messengerLinks[Math.floor(Math.random() * messengerLinks.length)];
-
     setTimeout(() => {
       window.location.href = randomLink;
-    }, 800); // Delay to allow Pixel to fire
+    }, 800); // Delay ให้ Pixel ยิงก่อน
   </script>
 
   <style>
